@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color changer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="body">
+    <div class="col text-center mt-5">
+        <button class="btn btn-outline-dark my-auto" id="btn">Click Me!</button>
+    </div>
+</body>
+
+<script>
+ const btn = document.querySelector("#btn");
+ const body = document.querySelector("#body");
+
+ const colors = ["Blue", "Red", "Yellow", "Green", "Purple", "Crimson", 'teal', 'white', 'orange', 'lime', 'grey', 'gray', 'darkorange', 'darkred', 'aquamarine', 'chocolate', 'darkgreen'];
+
+    body.style.backgroundColor = 'white';
+    
+    btn.addEventListener("click",  () => {
+    const randomColor = parseInt(Math.random() * colors.length);
+    body.style.backgroundColor = colors[randomColor]
+  });
+ 
+</script>
+
+</html>
